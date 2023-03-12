@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+/* base style */
 * {
   margin: 0;
   padding: 0;
@@ -79,3 +80,59 @@ input:checked + .meme-description + .meme-image {
 input:checked + .meme-description span {
   transform: rotate(45deg);
 }
+
+/* adaptive stuff */
+
+@media (max-width: 700px) {
+  body {
+    font-size: 1.1rem;
+  }
+
+  .meme-container {
+    width: 90%;
+  }
+
+  .meme-description {
+    font-size: 0.8em;
+  }
+
+  .meme-image {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    font-size: 1.6rem;
+  }
+  .meme-description {
+    cursor: pointer;
+  }
+
+  .meme-description span {
+    color: transparent;
+  }
+  
+  .meme-container:hover .meme-description {
+    color: rgba(18, 0, 182, 0.978);
+  }
+  .meme-container:hover .meme-description span {
+    color: rgba(18, 0, 182, 0.978);
+  }
+  input:checked + .meme-description, input:checked + .meme-description span {
+    color: black !important;
+  }
+  .meme-description:active, .meme-description:active span {
+    color: black !important;
+  }
+
+  .meme-description:active + .meme-image {
+    opacity: 70%;
+  }
+
+  .meme-item:hover .meme-image {
+    max-height: 50vh;
+    transform: scaleY(1);
+    margin-top: 1rem;
+  }
+ }
