@@ -114,10 +114,10 @@ input:checked + .meme-description span {
   }
   
   .meme-container:hover .meme-description {
-    color: rgba(18, 0, 182, 0.978);
+    color: rgba(182, 0, 0, 0.978);
   }
   .meme-container:hover .meme-description span {
-    color: rgba(18, 0, 182, 0.978);
+    color: rgba(182, 0, 0, 0.978);
   }
   input:checked + .meme-description, input:checked + .meme-description span {
     color: black !important;
